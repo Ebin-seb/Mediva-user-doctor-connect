@@ -1,0 +1,164 @@
+.btns:hover{
+  color:white;
+  background:black;
+  transform: scale(1.1,1.1);
+}
+a{
+  text-decoration:none !important;
+}.shop-dashboard {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.dashboard-navbar {
+  border-bottom: 1px solid #dee2e6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.search-bar {
+  width: 300px;
+}
+
+.sidebar {
+  min-height: calc(100vh - 76px);
+  position: sticky;
+  top: 76px;
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-link {
+  padding: 12px 20px;
+  color: #495057;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 4px 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+.sidebar-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.shop-header {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shop-photo-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.shop-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shop-photo-container:hover .photo-overlay {
+  opacity: 1;
+}
+
+.shop-name {
+  color: #2c3e50;
+}
+
+.shop-stats {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.dashboard-card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+}
+
+.table-responsive {
+  border-radius: 8px;
+}
+
+.user-profile img {
+  border: 2px solid #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: auto;
+    position: static;
+  }
+  
+  .search-bar {
+    width: 200px;
+  }
+  
+  .shop-photo-container {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .search-bar {
+    width: 150px;
+  }
+  
+  .shop-stats .stat-value {
+    font-size: 1.2rem;
+  }
+}
